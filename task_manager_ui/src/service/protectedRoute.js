@@ -8,4 +8,3 @@ const ProtectedRoute = ({ children }) => {
 };
 
 export default ProtectedRoute;
-/Users/adityayadav/Interview/new folder/
