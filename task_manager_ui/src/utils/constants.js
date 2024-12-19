@@ -1,0 +1,1 @@
+export const USER_TYPE = [{code:1,name:"Admin"},{code:2,name:"Member"}];

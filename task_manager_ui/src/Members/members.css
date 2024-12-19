@@ -1,0 +1,24 @@
+.members {
+    .memberButton {
+        background: none;
+        color: blue;
+    }
+
+    .addMemberButton {
+        float: left;
+        margin-top: 2%;
+        margin-left: 10%;
+    }
+    .header {
+        padding-top: 10px;
+    }
+    .prjHeader {
+        text-align: left;
+        margin-left: 10%;
+        font-size: 25px;
+        padding: 10px 10px 10px 0px;
+        span {
+            padding-right: 10px;
+        }
+    }
+}

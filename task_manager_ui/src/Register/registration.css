@@ -1,0 +1,30 @@
+/* Filename: App.css */
+
+
+.label {
+    display: block;
+    font-size: larger;
+    padding: 5px;
+}
+
+.input,.select {
+    font-size: larger;
+    padding: 5px;
+    margin: 2px;
+
+}
+
+.btn {
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    font-size: larger;
+    display: block;
+    padding: 5px;
+    margin: 10px auto;
+}
+
+.messages {
+    display: flex;
+    justify-content: center;
+}
