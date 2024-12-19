@@ -62,3 +62,31 @@ table, th, td {
   border: 1px solid lightcoral;
     border-collapse: collapse;
 }
+
+
+.label {
+  font-size: larger;
+  padding: 5px;
+}
+
+.input,.select {
+  font-size: larger;
+  padding: 5px;
+  margin: 2px 2px 40px 0px;
+
+}
+
+.btn {
+  color: white;
+  background-color: red;
+  border-radius: 5px;
+  font-size: larger;
+  display: block;
+  padding: 5px;
+  margin: 10px auto;
+}
+
+.messages {
+  display: flex;
+  justify-content: center;
+}

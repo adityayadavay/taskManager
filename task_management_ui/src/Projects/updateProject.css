@@ -1,0 +1,13 @@
+.updateProject {
+    .label.desc {
+        margin-left: -40px;
+    }
+    .input {
+        margin-left: 10px !important;
+    }
+
+    .completionDate {
+        margin-right: 30px;
+    padding-bottom: 30px;
+    }
+}

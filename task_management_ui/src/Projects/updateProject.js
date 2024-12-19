@@ -123,6 +123,7 @@ const UpdateProject = () => {
 
             <form>
                 {/* Labels and inputs for form data */}
+                <div>
                 <label className="label">Name</label>
                 <input
                     onChange={(e) => { resetMessage(); setName(e.target.value) }}
@@ -130,18 +131,23 @@ const UpdateProject = () => {
                     value={name}
                     type="text"
                 />
+                </div>
 
-                <label className="label">Description</label>
+                <div>
+                <label className="label desc">Description</label>
                 <input
                     onChange={(e) => { resetMessage(); setDescription(e.target.value) }}
                     className="input"
                     value={description}
                     type="text"
                 />
+                </div>
 
+                <div className="completionDate">
                 <label className="label">Completion Date</label>
                 <DatePicker onChange={(e) => { resetMessage(); setDate(e); }} value={date} />
 
+                </div>
                 <button onClick={handleSubmit} className="btn" type="submit">
                     Submit
                 </button>

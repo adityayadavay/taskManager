@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
+import "./home.css";
 
 const Home = () => {
     return (
-        <div>
+        <div className="home">
             <h1>Welcome to the Task Management Portal</h1>
-            <Link to={`/login`}>
+            <Link className="button login" to={`/login`}>
                 Login
             </Link>
-            <Link to={`/register`}>
+            <Link className="button signup" to={`/register`}>
                 Sign up
             </Link>
         </div>

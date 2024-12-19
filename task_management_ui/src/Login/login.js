@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from "../service/authenticate";
 import { useLocation } from "react-router-dom";
+import "./login.css";
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -9,24 +10,24 @@ const Login = () => {
     const [error, setError] = useState(false);
     const [apiError, setApiError] = useState(false);
     const [userCredError, setUserCredError] = useState(false);
-    const { isAuthenticated,login,logout,userType } = useContext(AuthContext);
+    const { isAuthenticated, login, logout, userType } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     const logoutAction = location.state ? location.state.action : null;
 
     useEffect(() => {
-        console.log("isAuthenticated,userType = ",isAuthenticated,userType);
-        if(isAuthenticated && userType) {
+        console.log("isAuthenticated,userType = ", isAuthenticated, userType);
+        if (isAuthenticated && userType) {
             navigate('/project/list', { replace: true });
         }
-    },[isAuthenticated,userType]);
+    }, [isAuthenticated, userType]);
 
     useEffect(() => {
-        if(logoutAction) {
+        if (logoutAction) {
             logout();
         }
-        
-    },[logoutAction]);
+
+    }, [logoutAction]);
     // Showing error message if error is true
     const errorMessage = () => {
         let message = "";
@@ -81,7 +82,7 @@ const Login = () => {
                     const data = await response.json();
                     localStorage.setItem("token", data.token);
                     console.log(data);
-                    login(data.token);    
+                    login(data.token);
                 }
             } catch (err) {
                 setApiError(true);
@@ -89,21 +90,24 @@ const Login = () => {
         }
     }
     return (
-        <div className="form">
+        <div className="login">
             <h1>Login</h1>
             <div className="messages">
                 {errorMessage()}
             </div>
 
             <form>
-                <label className="label">Email</label>
-                <input
-                    onChange={(e) => { resetError(); setEmail(e.target.value); }}
-                    className="input"
-                    value={email}
-                    type="email"
-                />
+                <div>
+                    <label className="label">Email</label>
+                    <input
+                        onChange={(e) => { resetError(); setEmail(e.target.value); }}
+                        className="input email"
+                        value={email}
+                        type="email"
+                    />
+                </div>
 
+                <div>
                 <label className="label">Password</label>
                 <input
                     onChange={(e) => { resetError(); setPassword(e.target.value) }}
@@ -111,6 +115,7 @@ const Login = () => {
                     value={password}
                     type="password"
                 />
+                </div>
                 <button onClick={handleSubmit} className="btn" type="submit">
                     Submit
                 </button>

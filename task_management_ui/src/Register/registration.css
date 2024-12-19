@@ -1,8 +1,7 @@
-/* Filename: App.css */
+/* Filename: App.css
 
 
 .label {
-    display: block;
     font-size: larger;
     padding: 5px;
 }
@@ -27,4 +26,4 @@
 .messages {
     display: flex;
     justify-content: center;
-}
+} */
